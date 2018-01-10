@@ -12,6 +12,9 @@
     let firstDayWeekDay = firstDay.getDay();
     if (firstDayWeekDay === 0) firstDayWeekDay = 7;
 
+    year = firstDay.getFullYear();
+    month = firstDay.getMonth() + 1;
+
     let lastDayOfLastMonth = new Date(year, month -1, 0);
     let lastDateOfLastMonth = lastDayOfLastMonth.getDate();
     
@@ -39,12 +42,17 @@
       if (thisMonth === 13) thisMonth = 1;
 
       ret.push({
+
         month: thisMonth,
         date: date,
         showDate: showDate
       })
     }
-    return ret;
+    return {
+      year: year,
+      month: month,
+      days: ret
   }
+}
   window.datepicker = datepicker;
-})();
+})()
