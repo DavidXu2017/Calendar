@@ -33,7 +33,6 @@
             html += '</tr>';
           }
         }
-
       html +='</tbody>'+
     '</table>'+
   '</div>';
@@ -113,20 +112,15 @@
 
     function format(date) {
       ret = '';
-
       let padding = function(num) {
         if (num <= 9) {
           return '0' + num;
         }
         return num;
       }
-
       ret += date.getFullYear() + '-';
-
       ret += padding(date.getMonth() + 1) + '-';
-
       ret += padding(date.getDate());
-
       return ret;
     }
 
