@@ -1,10 +1,17 @@
 .ui-datepicker-wrapper{
+  font-family: 'Source Sans Pro', sans-serif;
   width: 240px;
   font-size: 16px;
   color: #666;
   box-shadow: 2px 2px 8px 2px rgba(128, 128, 128, 0.6);
   -webkit-box-shadow: 2px 2px 8px 2px rgba(128, 128, 128, 0.6);
   -moz-box-shadow: 2px 2px 8px 2px rgba(128, 128, 128, 0.6);
+  display: none;
+  position: absolute;
+}
+
+.ui-datepicker-wrapper-show {
+  display: block;
 }
 
 .ui-datepicker-wrapper .ui-datepicker-header{
@@ -18,7 +25,6 @@
 }
 
 .ui-datepicker-wrapper .ui-datepicker-btn{
-  font-family: serif;
   font-size: 20px;
   width: 20px;
   height: 50px;
